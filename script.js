@@ -30,3 +30,18 @@ function palindrome(str){
 
 palindrome("raceCar")
 palindrome("jason")
+
+
+// Sum Array
+// Write a function sumArraythat takes an array as an argument. The array should contain numbers. The function should return the sum of the numbers in the array. Use a for loop within the function to iterate over the array and sum the contents. Use a variable such as
+
+let sum = 0;
+
+function sumArry(arr){
+  for(let i = 0; i < arr.length; i++){
+    sum += arr[i]
+    console.log(sum)
+  }
+}
+
+sumArry([1, 2, 3, 4, 5, 6])
