@@ -45,3 +45,36 @@ function sumArry(arr){
 }
 
 sumArry([1, 2, 3, 4, 5, 6])
+
+
+// Prime Numbers
+// A Prime number is a number that is not evenly divisible by another number except 1 and itself. If you want to read more deeply about it, go here. To test whether a number is Prime, you only need to test as far as the square root of that number. This is advisable for optimization and testing large numbers.
+
+
+function checkPrime(prime){
+  if(prime === 0 || prime === 1){
+    return false;
+  }
+
+  for(var i = 2; i < prime; i++){
+    if(prime % i === 0){
+      return false
+    }
+  }
+  return true
+}
+
+checkPrime(100)
+
+
+function printPrimes(p){
+  let box = [];
+  for(let i = 0; i < p ; i++){
+    if(checkPrime(i)){
+      box.push(i)
+    }
+  }
+  console.log(box)
+}
+
+printPrimes(100)
