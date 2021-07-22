@@ -1,3 +1,9 @@
+const rock = document.getElementById("Rock")
+const paper = document.getElementById("Paper")
+const scissors = document.getElementById("Scissors")
+const h1 = document.getElementById("result")
+
+console.log(rock)
 // Verbal Questions
 // Write answers to the following questions as comments. As a reminder you can highlight your code and type command+ /to turn your code into a comment.
 //
@@ -78,3 +84,63 @@ function printPrimes(p){
 }
 
 printPrimes(100)
+
+
+
+
+
+function comp(){
+  const claw = Math.floor(Math.random()*3)
+  if(claw === 0){
+    return "Rock"
+  } else if(claw === 1){
+    return "Paper"
+  } else {
+    return "Scissors"
+  }
+}
+
+
+let compChoice = comp()
+
+
+function winnerCheck(playerChoice, compChoice){
+if(playerChoice === compChoice){
+  h1.innerHTML="Draw"
+  console.log("draw")
+} else if (playerChoice ==="Rock" && compChoice === "Paper"){
+  h1.innerHTML="Player Loses"
+  console.log("player loses")
+} else if (playerChoice ==="Paper"&& compChoice === "Scissors"){
+  h1.innerHTML="Player Loses"
+  console.log("player loses")
+}else if (playerChoice ==="Scissors" && compChoice === "Rock"){
+  h1.innerHTML="Player Wins"
+  console.log("player wins")
+} else if (playerChoice ==="Rock" && compChoice === "Scissors"){
+  h1.innerHTML="Player Wins"
+  console.log("player wins")
+} else if (playerChoice ==="Paper" && compChoice === "Rock"){
+  h1.innerHTML="Player Wins"
+  console.log("player wins")
+} else if (playerChoice ==="Scissors" && compChoice === "Paper"){
+  h1.innerHTML="Player Loses"
+  console.log("player loses")
+} else {
+  console.log("error")
+}
+}
+
+
+rock.addEventListener('click', (e)=>{
+winnerCheck("Rock",comp())
+});
+
+paper.addEventListener('click', (e)=>{
+winnerCheck("Paper",comp())
+});
+
+
+scissors.addEventListener('click', (e)=>{
+winnerCheck("Scissors",comp())
+});

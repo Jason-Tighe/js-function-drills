@@ -1,0 +1,29 @@
+h1{
+  text-align: center;
+}
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+
+}
+
+#Rock{
+  background: pink;
+  height: 200px;
+  width: 200px;
+}
+#Paper{
+  background: orange;
+  height: 200px;
+  width: 200px;
+}
+#Scissors{
+  background: teal;
+  height: 200px;
+  width: 200px;
+}
